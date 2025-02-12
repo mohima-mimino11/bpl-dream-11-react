@@ -1,0 +1,152 @@
+[
+  {
+      "playerId": 1,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm medium",
+      "bidding_price": 2500000
+  },
+  {
+      "playerId": 2,
+      "name": "Steve Smith",
+      "country": "Australia",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm leg spin",
+      "bidding_price": 2200000
+  },
+  {
+      "playerId": 3,
+      "name": "Ben Stokes",
+      "country": "England",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "All-rounder",
+      "batting_type": "Left-handed",
+      "bowling_type": "Right-arm fast-medium",
+      "bidding_price": 2000000
+  },
+  {
+      "playerId": 4,
+      "name": "Kane Williamson",
+      "country": "New Zealand",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm off spin",
+      "bidding_price": 1800000
+  },
+  {
+      "playerId": 5,
+      "name": "Jasprit Bumrah",
+      "country": "India",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Bowler",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm fast",
+      "bidding_price": 1900000
+  },
+  {
+      "playerId": 6,
+      "name": "David Warner",
+      "country": "Australia",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Left-handed",
+      "bowling_type": "Right-arm leg spin",
+      "bidding_price": 1700000
+  },
+  {
+      "playerId": 7,
+      "name": "Rashid Khan",
+      "country": "Afghanistan",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Bowler",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm leg spin",
+      "bidding_price": 2100000
+  },
+  {
+      "playerId": 8,
+      "name": "Jos Buttler",
+      "country": "England",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Wicketkeeper",
+      "batting_type": "Right-handed",
+      "bowling_type": "N/A",
+      "bidding_price": 1600000
+  },
+  {
+      "playerId": 9,
+      "name": "Trent Boult",
+      "country": "New Zealand",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Bowler",
+      "batting_type": "Right-handed",
+      "bowling_type": "Left-arm fast-medium",
+      "bidding_price": 1500000
+  },
+  {
+      "playerId": 10,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm off spin",
+      "bidding_price": 2300000
+  },
+  {
+      "playerId": 11,
+      "name": "Kagiso Rabada",
+      "country": "South Africa",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Bowler",
+      "batting_type": "Left-handed",
+      "bowling_type": "Right-arm fast",
+      "bidding_price": 1950000
+  },
+  {
+      "playerId": 12,
+      "name": "Quinton de Kock",
+      "country": "South Africa",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Wicketkeeper",
+      "batting_type": "Left-handed",
+      "bowling_type": "N/A",
+      "bidding_price": 1650000
+  },
+  {
+      "playerId": 13,
+      "name": "Shakib Al Hasan",
+      "country": "Bangladesh",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "All-rounder",
+      "batting_type": "Left-handed",
+      "bowling_type": "Left-arm orthodox",
+      "bidding_price": 1850000
+  },
+  {
+      "playerId": 14,
+      "name": "Rohit Sharma",
+      "country": "India",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Batsman",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm off spin",
+      "bidding_price": 2400000
+  },
+  {
+      "playerId": 15,
+      "name": "Pat Cummins",
+      "country": "Australia",
+      "image": "https://static.cricketaddictor.com/images/posts/2025/Pat-Cummins-Australia-ICC-Champions-Trophy-2025-Squad-.webp?q=80",
+      "role": "Bowler",
+      "batting_type": "Right-handed",
+      "bowling_type": "Right-arm fast",
+      "bidding_price": 2050000
+  }
+]
