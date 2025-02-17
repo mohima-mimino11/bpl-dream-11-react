@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react'
+
 import PropTypes from 'prop-types'
 import PlayerAvailable from '../PlayerAvailable/PlayerAvailable';
+// import SelectedPlayers from '../SelectedPlayer/SelectedPlayers';
 
-const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum }) => {
-  // const [players, setPlayers] = useState([]);
-
-  // useEffect(() =>{
-  //   fetch('players.json')
-  //     .then(res => res.json()
-  //     .then(data => setPlayers(data))
-  //   )
-  // }, [])
+const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton }) => {
+  
   return (
-    <div className='mt-20 mx-[140px]'>
+    <div className='mt-20 mx-[140px]' id='available-container'>
       <div className='flex items-center justify-between'>
         <h3 className="text-3xl font-bold">Available Players</h3>
         <div className="join join-vertical lg:join-horizontal">
-          <button className="btn join-item text-base font-bold">Available</button>
-          <button className="btn join-item text-base font-bold">Selected(<span className='text-base font-bold'>{playerNum}</span>)</button>
+          <button className="btn join-item text-base font-bold" onClick={() =>handleToggleButton()} id="available-btn">Available</button>
+          <button className="btn join-item text-base font-bold" >Selected(<span className='text-base font-bold'>{playerNum}</span>)</button>
           
         </div>
 
@@ -36,6 +30,10 @@ const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum }) => {
 }
 
 AvailablePlayers.propTypes = {
+  players : PropTypes.array,
+  credit: PropTypes.number,
+  handleAddPlayer: PropTypes.func,
+  playerNum: PropTypes.number
 
 }
 

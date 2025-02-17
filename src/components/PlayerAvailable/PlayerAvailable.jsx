@@ -12,16 +12,7 @@ const PlayerAvailable = ({player, credit, handleAddPlayer}) => {
     }
    
   };
-  // const handleAddPlayer = (playerNum) =>{
-  //   console.log(playerNum);
-    
-  //     if(playerNum >= 6){
-  //       return toast.warn('Cannot Add More Players!', {
-  //         position: 'top-center',
-  //       });
-  //     } 
-  //     return playerNum++; 
-  // }
+  
 
   return (
     <div>
@@ -51,7 +42,7 @@ const PlayerAvailable = ({player, credit, handleAddPlayer}) => {
           </div>
           <div className="flex justify-between items-center" >
             <p className="text-base font-semibold">Price: {bidding_price}</p>
-            <button className="btn btn-outline" onClick={() => {topCenter(); handleAddPlayer(bidding_price)}}>Choose Player</button>
+            <button className="btn btn-outline" onClick={() => {topCenter(); handleAddPlayer(bidding_price, player)}}>Choose Player</button>
             <ToastContainer></ToastContainer>
           </div>
         </div>
@@ -62,7 +53,9 @@ const PlayerAvailable = ({player, credit, handleAddPlayer}) => {
 }
 
 PlayerAvailable.propTypes = {
-  player: PropTypes.object.isRequired
+  player: PropTypes.object.isRequired,
+  credit: PropTypes.number,
+  handleAddPlayer: PropTypes.func
 }
 
 export default PlayerAvailable
