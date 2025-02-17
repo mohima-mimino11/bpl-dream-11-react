@@ -2,7 +2,7 @@ import logo from '../../assets/logo.png'
 import coin from '../../assets/dollar 1.png'
 
 const Navbar = ({credit}) => {
-  
+  // console.log(players);
   return (
     <div className='flex justify-between items-center px-[140px] pt-[50px]'>
       <div>

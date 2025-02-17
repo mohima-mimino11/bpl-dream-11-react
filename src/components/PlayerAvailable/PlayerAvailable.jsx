@@ -1,10 +1,28 @@
-import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import PropTypes from 'prop-types'
 import { FaUser, FaFlag } from "react-icons/fa";
-const PlayerAvailable = ({player}) => {
-  console.log(player);
-  const {image, name, country, role, batting_type, bowling_type, bidding_price} = player;
-  
+const PlayerAvailable = ({player, credit, handleAddPlayer}) => {
+  // console.log(player);
+  const {image, name, country, role, batting_type, bowling_type, bidding_price, playerId} = player;
+  const topCenter = () => {
+    if(credit === 0){
+      return toast.warn('Need More coins!', {
+        position: 'top-center',
+      });
+    }
+   
+  };
+  // const handleAddPlayer = (playerNum) =>{
+  //   console.log(playerNum);
+    
+  //     if(playerNum >= 6){
+  //       return toast.warn('Cannot Add More Players!', {
+  //         position: 'top-center',
+  //       });
+  //     } 
+  //     return playerNum++; 
+  // }
+
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-sm p-6">
@@ -33,7 +51,8 @@ const PlayerAvailable = ({player}) => {
           </div>
           <div className="flex justify-between items-center" >
             <p className="text-base font-semibold">Price: {bidding_price}</p>
-            <button className="btn btn-outline">Choose Player</button>
+            <button className="btn btn-outline" onClick={() => {topCenter(); handleAddPlayer(bidding_price)}}>Choose Player</button>
+            <ToastContainer></ToastContainer>
           </div>
         </div>
       </div>
