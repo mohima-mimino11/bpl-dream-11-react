@@ -48,14 +48,18 @@ function App() {
     console.log('toggle clicked');
     const selectedPlayersBtn = document.getElementById('selected-btn');
     const availablePlayersBtn = document.getElementById('available-btn');
+    const addMorePlayerBtn = document.getElementById('add-more-btn');
     const selectedContainer = document.getElementById('selected-containter');
     const availableContainer = document.getElementById('available-container');
     if(selectedPlayersBtn){
       selectedContainer.classList.remove('hidden');
       availableContainer.classList.add('hidden');
-    }else if(availablePlayersBtn){
+    }else if(availablePlayersBtn && addMorePlayerBtn){
+      availableContainer.classList.remove('hidden')
+      selectedContainer.classList.add('hidden')
+    }else{
       selectedContainer.classList.add('hidden');
-     
+      availableContainer.classList.remove('hidden')
     }
     
   }

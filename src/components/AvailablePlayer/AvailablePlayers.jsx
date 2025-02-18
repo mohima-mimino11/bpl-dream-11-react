@@ -6,20 +6,20 @@ import PlayerAvailable from '../PlayerAvailable/PlayerAvailable';
 const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton }) => {
   
   return (
-    <div className='mt-20 mx-[140px]' id='available-container'>
+    <div className='mt-20 mx-[140px]' id='available-container' >
       <div className='flex items-center justify-between'>
         <h3 className="text-3xl font-bold">Available Players</h3>
         <div className="join join-vertical lg:join-horizontal">
           <button className="btn join-item text-base font-bold" onClick={() =>handleToggleButton()} id="available-btn">Available</button>
-          <button className="btn join-item text-base font-bold" >Selected(<span className='text-base font-bold'>{playerNum}</span>)</button>
+          <button className="btn join-item text-base font-bold" onClick={() =>handleToggleButton()} id="selected-btn" >Selected(<span className='text-base font-bold'>{playerNum}</span>)</button>
           
         </div>
 
       </div>
-      <h1 className="text-4xl">Players: {players.length}</h1>
+      {/* <h1 className="text-4xl">Players: {players.length}</h1> */}
       <div className='mt-9 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12' >
         {
-          players.map((player) => <PlayerAvailable key={player.playerId} player={player} credit={credit} 
+          players.map((player, idx) => <PlayerAvailable key={idx} player={player} credit={credit} 
           handleAddPlayer={handleAddPlayer}></PlayerAvailable>)
         }
 

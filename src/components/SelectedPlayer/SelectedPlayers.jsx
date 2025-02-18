@@ -8,7 +8,7 @@ const SelectedPlayers = ({selectedPlayers, playerNum, handleToggleButton}) => {
       <div className='flex items-center justify-between'>
          <h3 className="text-3xl font-bold">Selected Players (<span>{playerNum}</span> / 6)</h3>
          <div className="join join-vertical lg:join-horizontal">
-          <button className="btn join-item text-base font-bold" >Available</button>
+          <button className="btn join-item text-base font-bold" onClick={() =>handleToggleButton()} id="available-btn" >Available</button>
           <button className="btn join-item text-base font-bold" onClick={() =>handleToggleButton()} id="selected-btn">Selected(<span className='text-base font-bold'>{playerNum}</span>)</button>
           
         </div>
@@ -19,6 +19,7 @@ const SelectedPlayers = ({selectedPlayers, playerNum, handleToggleButton}) => {
         }
 
       </div>
+      <button className='btn bg-[#E7FE29] text-base font-bold mt-14 rounded-xl' id='add-more-btn'>Add More Player</button>
       
     </div>
   )

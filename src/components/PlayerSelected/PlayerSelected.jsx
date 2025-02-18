@@ -5,6 +5,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 const PlayerSelected = ({player}) => {
   const {name, batting_type, image} = player;
   return (
+    
     <div className='mt-10'>
       <div className='flex-col justify-center'>
           <div className='bg-white  border border-solid border-[#D9D9D9] flex justify-between items-center'>
@@ -17,9 +18,12 @@ const PlayerSelected = ({player}) => {
               </div>
               <AiOutlineDelete className='mr-6 w-[24px] h-[24px] text-[#F14749]'></AiOutlineDelete>
           </div>
+          
       </div>
       
     </div>
+    
+    
   )
 }
 
