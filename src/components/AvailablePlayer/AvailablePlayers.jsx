@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import PlayerAvailable from '../PlayerAvailable/PlayerAvailable';
 // import SelectedPlayers from '../SelectedPlayer/SelectedPlayers';
 
-const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton, isActive }) => {
+const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton}) => {
   
   return (
     <div className='mt-20 mx-[140px]' id='available-container'  >

@@ -42,11 +42,23 @@ function App() {
     }
     const deductedCredit = credit - money;
     setCredit(deductedCredit)
-      
+    // // remove from selected players
+    // const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
+    // setSelectedPlayers(remainingPlayers)
+  }
+
+  const handleRemoveSelectedPlayers = (id) =>{
+    // remove from selected players
+    const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
+    console.log(selectedPlayers);
+    setSelectedPlayers(remainingPlayers);
+    const deductedPlayerNum = playerNum - 1;
+    setPlayerNum(deductedPlayerNum)
+
   }
 
   const handleToggleButton = () =>{
-    console.log('toggle clicked');
+   
     setIsActive(!isActive)
     const selectedPlayersBtn = document.getElementById('selected-btn');
     const availablePlayersBtn = document.getElementById('available-btn');
@@ -76,12 +88,11 @@ function App() {
      handleAddPlayer={handleAddPlayer} 
      playerNum={playerNum}
      handleToggleButton={handleToggleButton}
-     isActive={isActive}
      ></AvailablePlayers>
      <SelectedPlayers selectedPlayers={selectedPlayers}
      playerNum={playerNum}
      handleToggleButton={handleToggleButton}
-     isActive={isActive}
+     handleRemoveSelectedPlayers={handleRemoveSelectedPlayers}
      ></SelectedPlayers>
     </>
   )

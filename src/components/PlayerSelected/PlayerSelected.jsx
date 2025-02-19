@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { AiOutlineDelete } from "react-icons/ai";
 
-const PlayerSelected = ({player}) => {
-  const {name, batting_type, image} = player;
+const PlayerSelected = ({playerSelect, handleRemoveSelectedPlayers}) => {
+  const {name, batting_type, image, playerId} = playerSelect
   return (
     
     <div className='mt-10'>
@@ -16,7 +16,10 @@ const PlayerSelected = ({player}) => {
                   <p className="text-base text-gray-500 mb-8">{batting_type}</p>
                 </div>
               </div>
-              <AiOutlineDelete className='mr-6 w-[24px] h-[24px] text-[#F14749]'></AiOutlineDelete>
+              <AiOutlineDelete className='mr-6 w-[24px] h-[24px] text-[#F14749]' 
+              onClick={() => handleRemoveSelectedPlayers(playerId)}>
+                
+              </AiOutlineDelete>
           </div>
           
       </div>

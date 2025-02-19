@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import PlayerSelected from '../PlayerSelected/PlayerSelected'
 
-const SelectedPlayers = ({selectedPlayers, playerNum, handleToggleButton}) => {
+const SelectedPlayers = ({selectedPlayers, playerNum, handleToggleButton, handleRemoveSelectedPlayers}) => {
   return (
     <div className='mt-20 mx-[140px] hidden' id='selected-containter'>
       <div className='flex items-center justify-between'>
@@ -15,11 +15,15 @@ const SelectedPlayers = ({selectedPlayers, playerNum, handleToggleButton}) => {
       </div>
       <div className='mt-9'>
         {
-          selectedPlayers.map((player)=> <PlayerSelected key={player.playerId} player={player}></PlayerSelected>  )
+          selectedPlayers.map((playerSelect, idx)=> <PlayerSelected key={idx} playerSelect={playerSelect} 
+          handleRemoveSelectedPlayers={handleRemoveSelectedPlayers}
+          ></PlayerSelected>  )
         }
 
       </div>
-      <button className='btn bg-[#E7FE29] text-base font-bold mt-14 rounded-xl' id='add-more-btn'>Add More Player</button>
+      <button className='btn bg-[#E7FE29] text-base font-bold mt-14 rounded-xl' id='add-more-btn' 
+      onClick={handleToggleButton}
+      >Add More Player</button>
       
     </div>
   )
