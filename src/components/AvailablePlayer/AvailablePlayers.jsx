@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import PlayerAvailable from '../PlayerAvailable/PlayerAvailable';
 // import SelectedPlayers from '../SelectedPlayer/SelectedPlayers';
 
-const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton }) => {
+const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleToggleButton, isActive }) => {
   
   return (
-    <div className='mt-20 mx-[140px]' id='available-container' >
+    <div className='mt-20 mx-[140px]' id='available-container'  >
       <div className='flex items-center justify-between'>
         <h3 className="text-3xl font-bold">Available Players</h3>
         <div className="join join-vertical lg:join-horizontal">

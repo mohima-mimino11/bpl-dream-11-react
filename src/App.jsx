@@ -12,6 +12,7 @@ function App() {
   const [playerNum, setPlayerNum] = useState(0)
   const [players, setPlayers] = useState([]);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const [isActive, setIsActive] = useState(false)
   
     useEffect(() =>{
       fetch('players.json')
@@ -46,15 +47,16 @@ function App() {
 
   const handleToggleButton = () =>{
     console.log('toggle clicked');
+    setIsActive(!isActive)
     const selectedPlayersBtn = document.getElementById('selected-btn');
     const availablePlayersBtn = document.getElementById('available-btn');
     const addMorePlayerBtn = document.getElementById('add-more-btn');
     const selectedContainer = document.getElementById('selected-containter');
     const availableContainer = document.getElementById('available-container');
-    if(selectedPlayersBtn){
+    if(selectedPlayersBtn && isActive){
       selectedContainer.classList.remove('hidden');
       availableContainer.classList.add('hidden');
-    }else if(availablePlayersBtn && addMorePlayerBtn){
+    }else if(availablePlayersBtn && addMorePlayerBtn && isActive){
       availableContainer.classList.remove('hidden')
       selectedContainer.classList.add('hidden')
     }else{
@@ -74,10 +76,12 @@ function App() {
      handleAddPlayer={handleAddPlayer} 
      playerNum={playerNum}
      handleToggleButton={handleToggleButton}
+     isActive={isActive}
      ></AvailablePlayers>
      <SelectedPlayers selectedPlayers={selectedPlayers}
      playerNum={playerNum}
      handleToggleButton={handleToggleButton}
+     isActive={isActive}
      ></SelectedPlayers>
     </>
   )
