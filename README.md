@@ -1,7 +1,6 @@
 # BPL DREAM 11 (React + Vite)
 it's a fun side project on BPL.
-## Technologies Used;
-- HTML, CSS, ES6 and React.
+## Technologies Used: HTML, CSS, ES6 and React.
 
 ### Key features of this projects are:
 - Claim coins and choose players
