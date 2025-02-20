@@ -5,6 +5,8 @@ import Banner from './components/Banner/Banner'
 import Navbar from './components/Navbar/Navbar'
 import AvailablePlayers from './components/AvailablePlayer/AvailablePlayers';
 import SelectedPlayers from './components/SelectedPlayer/SelectedPlayers';
+import Newsletter from './components/Newsletter/Newsletter';
+import Footer from './components/Footer/Footer';
 // import SelectedPlayers from './components/SelectedPlayer/SelectedPlayers';
 
 function App() {
@@ -26,14 +28,16 @@ function App() {
    
   }
 
-  const handleAddPlayer = (money, player) =>{
+  const handleAddPlayer = (money, player, id) =>{
     // console.log(playerNum);
     const newPlayers = [...selectedPlayers, player];
     setSelectedPlayers(newPlayers)
-    if(credit !== 0){
+    if(credit !== 0 ){
       const newPlayerNum = playerNum + 1;
       setPlayerNum(newPlayerNum)
     }
+   
+   
     if(playerNum >= 6){
       setPlayerNum(6)
       return toast.warn('Cannot Add More Players!', {
@@ -46,19 +50,8 @@ function App() {
     // const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
     // setSelectedPlayers(remainingPlayers)
   }
-
-  const handleRemoveSelectedPlayers = (id) =>{
-    // remove from selected players
-    const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
-    console.log(selectedPlayers);
-    setSelectedPlayers(remainingPlayers);
-    const deductedPlayerNum = playerNum - 1;
-    setPlayerNum(deductedPlayerNum)
-
-  }
-
+  
   const handleToggleButton = () =>{
-   
     setIsActive(!isActive)
     const selectedPlayersBtn = document.getElementById('selected-btn');
     const availablePlayersBtn = document.getElementById('available-btn');
@@ -79,6 +72,16 @@ function App() {
   }
   
 
+  const handleRemoveSelectedPlayers = (id) =>{
+    // remove from selected players
+    const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
+    console.log(selectedPlayers);
+    setSelectedPlayers(remainingPlayers);
+    const deductedPlayerNum = playerNum - 1;
+    setPlayerNum(deductedPlayerNum)
+
+  }
+
   return (
     <>
      <Navbar  credit={credit} ></Navbar>
@@ -94,6 +97,8 @@ function App() {
      handleToggleButton={handleToggleButton}
      handleRemoveSelectedPlayers={handleRemoveSelectedPlayers}
      ></SelectedPlayers>
+     <Newsletter></Newsletter>
+     <Footer></Footer>
     </>
   )
 }
