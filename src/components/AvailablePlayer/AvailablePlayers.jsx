@@ -17,7 +17,7 @@ const AvailablePlayers = ({players, credit, handleAddPlayer, playerNum, handleTo
 
       </div>
       {/* <h1 className="text-4xl">Players: {players.length}</h1> */}
-      <div className='mt-9 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12' >
+      <div className='mt-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12' >
         {
           players.map((player, idx) => <PlayerAvailable key={idx} player={player} credit={credit} 
           handleAddPlayer={handleAddPlayer}></PlayerAvailable>)

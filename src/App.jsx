@@ -23,12 +23,17 @@ function App() {
       )
     }, [])
   const handleAddToCredit = ()=>{
-    const newCredit = credit + 60000000 ;
-    setCredit(newCredit);
+    const newCredit = credit + 60000000;
+    if(newCredit > 0){
+      setCredit(newCredit);
+    }else{
+      setCredit(0)
+    }
+    
    
   }
 
-  const handleAddPlayer = (money, player, id) =>{
+  const handleAddPlayer = (money, player) =>{
     // console.log(playerNum);
     const newPlayers = [...selectedPlayers, player];
     setSelectedPlayers(newPlayers)
@@ -45,7 +50,12 @@ function App() {
       });
     }
     const deductedCredit = credit - money;
-    setCredit(deductedCredit)
+    if(deductedCredit > 0){
+      setCredit(deductedCredit);
+    }else{
+      setCredit(0)
+    }
+    
     // // remove from selected players
     // const remainingPlayers = selectedPlayers.filter(playerSelect => playerSelect.playerId !== id);
     // setSelectedPlayers(remainingPlayers)
@@ -78,7 +88,12 @@ function App() {
     console.log(selectedPlayers);
     setSelectedPlayers(remainingPlayers);
     const deductedPlayerNum = playerNum - 1;
-    setPlayerNum(deductedPlayerNum)
+    if(playerNum > 0){
+      setPlayerNum(deductedPlayerNum);
+    }else{
+      setPlayerNum(0);
+    }
+    
 
   }
 

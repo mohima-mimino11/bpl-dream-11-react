@@ -2,9 +2,9 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <div  className='bg-[#06091A] text-white p-10'>
+    <div  className='bg-[#06091A] text-white py-2 flex-col items-center justify-center'>
      
-        <img src={logo} className='mt-[240px] mx-[780px]' alt="" />
+        <img src={logo} className='xmt-[240px] px-[780px]' alt="" />
         <div className='flex items-center justify-between mt-9'>
             <div>
               <h4 className="text-lg font-semibold">About Us</h4>
