@@ -5,7 +5,7 @@ const Navbar = ({credit}) => {
   // console.log(players);
   
   return (
-    <div className='flex justify-between items-center px-[140px] pt-[50px]'>
+    <div className='flex justify-between items-center px-36  py-14'>
       <div>
         <img src={logo} alt="logo" />
       </div>
